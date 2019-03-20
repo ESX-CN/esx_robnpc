@@ -1,4 +1,4 @@
 # esx_robnpc
-Simple as it reads.
+很简单粗暴的说明一下
 
-Aim an NPC and press E for it to give you money.
+瞄准NPC并按E,你就开始了你罪恶的一生
