@@ -17,11 +17,11 @@ Citizen.CreateThread(function()
 			local aiming, targetPed = GetEntityPlayerIsFreeAimingAt(PlayerId(-1))
 
 			if aiming then
-				local playerPed = GetPlayerPed(-1)
+				local playerPed = PlayerPedId()
 				local pCoords = GetEntityCoords(playerPed, true)
 				local tCoords = GetEntityCoords(targetPed, true)
 
-				if DoesEntityExist(targetPed) and IsEntityAPed(targetPed) then
+				if DoesEntityExist(targetPed) and IsEntityAPed(targetPed) and IsPedWeaponReadyToShoot(playerPed) then
 					if robbedRecently then
 						ESX.ShowNotification(_U('robbed_too_recently'))
 					elseif IsPedDeadOrDying(targetPed, true) then
